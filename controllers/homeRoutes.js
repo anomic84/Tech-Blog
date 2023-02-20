@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 
 
 
-//get by id user_id
+//get post by id user_id
 router.get('/post/:id', async (req, res) => {
     try {
         //get by id uses findByPk(req.params.id, include User and Comment model)
@@ -50,8 +50,9 @@ router.get('/post/:id', async (req, res) => {
         res.status(500).json(err);
     }
 })
-// get 
-router.get('/dashboard', withAuth, async (req, res) => {
+
+// get ADD BACK withAUTH
+router.get('/dashboard', async (req, res) => {
     try {
         //find the user
         const userData = await User.findByPk(req.session.user_id, {

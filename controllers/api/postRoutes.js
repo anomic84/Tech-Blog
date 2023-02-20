@@ -5,8 +5,8 @@ const { Post } = require('../../models');
 // connects to login functions in utilities
 const withAuth = require('../../utils/auth');
 
-//post with Auth
-router.post('/', withAuth, async (req, res) => {
+//post with Auth ADD BACK withAUTH
+router.post('/',  async (req, res) => {
     try {
         const newPost = await Post.create({
             ...req.body,
@@ -19,8 +19,8 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-//updates by ID
-router.put('/:id', withAuth, async (req, res) => {
+//updates by ID ADD BACK withAUTH
+router.put('/:id', async (req, res) => {
     try {
         const postData = await Post.update({
             ...req.body,
@@ -39,8 +39,8 @@ router.put('/:id', withAuth, async (req, res) => {
     }
 });
 
-
-router.delete('/:id', withAuth, async (req, res) => {
+// ADD BACK withAUTH
+router.delete('/:id',  async (req, res) => {
     try {
         const postData = await Post.destroy({
             where: {

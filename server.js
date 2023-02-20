@@ -6,7 +6,8 @@ const exphbs = require('express-handlebars');
 
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
+//import sequelize connection
+const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -37,8 +38,8 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-//import sequelize connection
-const sequelize = require('./config/connection');
+
+
 
 // middleware
 app.use(express.json());

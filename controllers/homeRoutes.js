@@ -51,8 +51,8 @@ router.get('/post/:id', async (req, res) => {
     }
 })
 
-// get ADD BACK withAUTH
-router.get('/dashboard', async (req, res) => {
+// get 
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
         //find the user
         const userData = await User.findByPk(req.session.user_id, {

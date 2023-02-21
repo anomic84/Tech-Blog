@@ -1,3 +1,5 @@
+const { User } = require('../models');
+
 [
     {
         "name": "Jim",
@@ -15,3 +17,7 @@
         "password": "password123"
     }
 ]
+
+const seedUser = () => Tag.bulkCreate(userData);
+
+module.exports = seedUser;

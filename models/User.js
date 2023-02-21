@@ -16,6 +16,31 @@ class User extends Model {
 // Makes the columns to clarify what type of backend data makes up the User MySQL table
 User.init({
     // Make column here
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+            isEmail: true,
+        },
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [8],
+        },
+    },
 },
     {
         hooks: {

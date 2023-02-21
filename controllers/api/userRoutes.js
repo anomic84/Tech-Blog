@@ -54,13 +54,13 @@ router.post('/login', async (req, res) => {
         });
 
     } catch (err) {
-        res.status(400).json(err);
+        res.status(500).json(err);
     }
 });
 
 // Logout
 router.post('/logout', (req, res) => {
-    //When the user logs out, eliminate the session
+    //Ends the session when the user logs out
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();

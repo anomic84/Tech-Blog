@@ -24,7 +24,7 @@
                     <!-- Handlebars saying "if logged in show this" if not, move down to else -->
                     {{#if logged_in}}
                     <a class="nav-link" href="/dashboard">Dashboard</a>
-                    <a class="nav-link" href="" id="logout">Logout</a>
+                    <a class="nav-link" href="/api/users/logout" id="logout">Logout</a>
                     <!-- Handlebars saying "else, show this" -->
                     {{else}}
                     <a class="nav-link" href="/login">Login</a>
@@ -35,6 +35,9 @@
         </div>
     </nav>
     {{{body}}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

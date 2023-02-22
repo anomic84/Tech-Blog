@@ -1,0 +1,14 @@
+:root {
+    --bgcolor1: rgb(69, 44, 44);
+    --bgcolor2: rgb(141, 138, 3);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: var(--bgcolor1);
+}

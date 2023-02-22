@@ -1,6 +1,6 @@
 // Grabs sequelize from connection.js, and grabs the User, Post Comment models from models folder
 const sequelize = require('../config/connection');
-const { User, Post, Comment } = require('../models');
+const { User, Comment, Post } = require('../models');
 
 // makes an object to locate the seeds in js
 const userData = require('./user-seeds.js');

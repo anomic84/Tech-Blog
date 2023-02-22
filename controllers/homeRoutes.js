@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
         //get post data
         const posts = postData.map((post) => post.get({ plain: true }));
         // render to homepage with logged in clause
+
         res.render('homepage', {
             posts,
             logged_in: req.session.logged_in

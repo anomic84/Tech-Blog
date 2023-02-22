@@ -54,6 +54,7 @@ router.get('/post/:id', async (req, res) => {
 
 // get 
 router.get('/dashboard', withAuth, async (req, res) => {
+    console.log("GET DASHBOARD *****",req.session.user_id)
     try {
         //find the user
         const userData = await User.findByPk(req.session.user_id, {
@@ -62,6 +63,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         });
         //gets User data
         const user = userData.get({ plain: true });
+        console.log(user,"dashboard")
 
         res.render('dashboard', {
             ...user,

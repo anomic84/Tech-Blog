@@ -1,4 +1,4 @@
-[
+const user = [
     {
         "name": "Jim",
         "email": "Jim@aol.com",
@@ -6,4 +6,4 @@
     }
 ]
 
-
+module.exports = user

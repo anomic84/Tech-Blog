@@ -1,6 +1,6 @@
 const comment = [
     {
-        "content": "This is amazing!"
+        "content": "This is amazing!",
     }
 ]
 

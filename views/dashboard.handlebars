@@ -1,12 +1,13 @@
+{{!------------ WElCOME BAR UNDER NAV ------------}}
 <div class="row dash-header">
     <div class="col-auto">
         <h2>Welcome, {{name}}!</h2>
     </div>
 </div>
-
-<div class="row mt-4">
-    {{!-- new post form --}}
-    <div class="col-md-6">
+{{!------------ Section for Create and List of Post(s) ------------}}
+<div class="conatiner row m-4">
+    {{!---------- CREATE POST SECTION ----------}}
+    <div class="create-post col">
         <h3>Create a new post:</h3>
 
         <form class="form new-post-form">
@@ -23,15 +24,15 @@
             </div>
         </form>
     </div>
-    {{!-- if there is a post(s) put this section --}}
+    {{!---------- CREATED POST SECTION ----------}}
     {{#if posts.length}}
-    <div class="col-md-6 post-list">
+    <div class="col post-list">
         <h3>Current Posts:</h3>
         {{!-- creates this section for EACH post linked by post.id --}}
         {{#each posts as |post|}}
         <div class="row mb-2">
             <div class="col-md-8">
-                <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+                <h4><a class="postname" id="postbutton" href="/post/{{post.id}}">{{post.name}}</a></h4>
             </div>
             <div class="col-md-4">
                 {{!-- allows deletion of post --}}

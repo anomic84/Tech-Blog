@@ -19,6 +19,10 @@ body {
 
 }
 
+h2 {
+    color: var(--bgcolor2);
+}
+
 /* ============ NavBar ============*/
 .navbarcss {
     background-color: var(--bgcolor1) !important;
@@ -51,13 +55,13 @@ body {
 .login h2 {
     display: flex;
     justify-content: center;
-    color: var(--bgcolor2);
+    /* color: var(--bgcolor2); */
 }
 
 .signup h2 {
     display: flex;
     justify-content: center;
-    color: var(--bgcolor2);
+    /* color: var(--bgcolor2); */
 }
 
 /* ========== Form Entry Areas ========== */
@@ -90,6 +94,7 @@ body {
 /* ========== Dash Board ========== */
 .dash-header {
     align-items: center;
+    padding-left: 30px;
 }
 
 .dash-header h2 {
@@ -98,6 +103,86 @@ body {
 }
 
 h3 {
+    color: var(--bgcolor2);
+}
+
+.create-post {
+    padding: 10px;
+    border: 5px solid var(--bgcolor2);
+    box-shadow: 5px 10px var(--bgcolor3);
+    /* margin-left: 10px; */
+    background-color: var(--bgcolor4);
+    justify-content: left;
+}
+
+.post-list {
+    padding: 10px;
+    border: 5px solid var(--bgcolor2);
+    box-shadow: 5px 10px var(--bgcolor3);
+    margin-left: 20px;
+    background-color: var(--bgcolor4);
+    justify-content: left;
+}
+
+/* ============ Post Page ============ */
+
+.postname {
+    color: var(--bgcolor2);
+}
+
+.postname:hover {
+    color: var(--bgcolor3);
+}
+
+.post-credits {
+    color: var(--bgcolor2);
+}
+
+.comment-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.addandupdate {
+    display: flex;
+    flex-direction: row;
+    /* align-items: space-around; */
+}
+
+.add-comment {
+    padding: 10px;
+    border: 5px solid var(--bgcolor2);
+    box-shadow: 5px 10px var(--bgcolor3);
+    margin-left: 10px;
+    background-color: var(--bgcolor4);
+    justify-content: left;
+}
+
+.add-com {
+    flex-direction: column;
+}
+
+.update-post {
+    padding: 10px;
+    margin-right: 10px;
+    border: 5px solid var(--bgcolor2);
+    box-shadow: 5px 10px var(--bgcolor3);
+    background-color: var(--bgcolor4);
+    justify-content: left;
+}
+
+.eachcomment {
+    color: var(--bgcolor4);
+    background-color: var(--bgcolor2);
+    box-shadow: 5px 10px var(--bgcolor3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.comments h4 {
     color: var(--bgcolor2);
 }
 

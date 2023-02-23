@@ -11,6 +11,7 @@ router.post('/', withAuth, async (req, res) => {
         const newPost = await Post.create({
             ...req.body,
             user_id: req.session.user_id,
+            // user_name: req.session.user_name,
         });
         //writes out new post in json format if no err
         res.status(200).json(newPost);

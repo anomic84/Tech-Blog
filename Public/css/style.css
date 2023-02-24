@@ -3,6 +3,7 @@
     --bgcolor2: rgb(94, 88, 180);
     --bgcolor3: rgb(121, 115, 198);
     --bgcolor4: rgb(57, 32, 32);
+    --bgcolor5: darkcyan;
 }
 
 * {
@@ -37,7 +38,7 @@ h2 {
 
 /* ============ Post Page ============ */
 .post {
-    background-color: var(--bgcolor2) !important;
+    background-color: var(--bgcolor2);
     box-shadow: 5px 10px var(--bgcolor3);
 }
 
@@ -83,6 +84,8 @@ h2 {
     border-style: none;
     margin: 5px;
     justify-content: right !important;
+
+    border-radius: 5px;
 }
 
 .form textarea {
@@ -124,6 +127,11 @@ h3 {
     justify-content: left;
 }
 
+.new-post-form textarea {
+    border-radius: 5px;
+    padding-left: 70px;
+}
+
 /* ============ Post Page ============ */
 
 .postname {
@@ -135,7 +143,19 @@ h3 {
 }
 
 .post-credits {
+    width: fit-content;
+    margin: 20px auto;
+    padding: 20px;
     color: var(--bgcolor2);
+    border: 5px solid var(--bgcolor2);
+    box-shadow: 5px 10px var(--bgcolor3);
+    /* margin-left: 10px; */
+    background-color: var(--bgcolor4);
+}
+
+.post-credits p {
+    font-size: 30px;
+    color: var(--bgcolor3)
 }
 
 .comment-area {
@@ -161,6 +181,10 @@ h3 {
 
 .add-com {
     flex-direction: column;
+}
+
+.add-com input {
+    padding: 40px 70px;
 }
 
 .update-post {
@@ -190,7 +214,7 @@ h3 {
 .btn {
     width: 100px;
     justify-content: center;
-    background-color: darkcyan;
+    background-color: var(--bgcolor5);
     border-color: var(--bgcolor2);
 }
 

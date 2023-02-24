@@ -44,10 +44,7 @@ const delButtonHandler = async (event) => {
   }
 };
 
-// const goToPost = async (event) => {
-//   event.preventDefault();
 
-// }
 if (document.querySelector('.new-post-form') != null) {
   document
     .querySelector('.new-post-form')
@@ -56,12 +53,7 @@ if (document.querySelector('.new-post-form') != null) {
 
 if (document.querySelector('.post-list') != null) {
   document
-    .querySelector('.post-list')
+    .querySelector('.postdelete')
     .addEventListener('click', delButtonHandler);
 }
 
-// if (document.querySelector('.postbutton') != null) {
-//   document
-//     .querySelector('.postbutton')
-//     .addEventListener('click', goToPost);
-// }

@@ -31,7 +31,7 @@ router.get('/post/:id', async (req, res) => {
     try {
         //get by id uses findByPk(req.params.id, include User and Comment model)
         const postData = await Post.findByPk(req.params.id, {
-            include: [{ model: User }, { model: Comment }],
+            include: [{ model: User }, { model: Comment, include: [User] }],
         });
         //get post data
         const post = postData.get({ plain: true });
@@ -54,7 +54,7 @@ router.get('/post/:id', async (req, res) => {
 
 // get 
 router.get('/dashboard', withAuth, async (req, res) => {
-    console.log("GET DASHBOARD *****",req.session.user_id)
+    console.log("GET DASHBOARD *****", req.session.user_id)
     try {
         //find the user
         const userData = await User.findByPk(req.session.user_id, {
@@ -63,7 +63,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         });
         //gets User data
         const user = userData.get({ plain: true });
-        console.log(user,"dashboard")
+        console.log(user, "dashboard")
 
         res.render('dashboard', {
             ...user,

@@ -49,7 +49,7 @@
             <h4>Comments:</h4>
             {{#each comments as |comment|}}
             <div class="eachcomment">
-                <p>{{comment.user_name}} on {{format_date comment.date_created}}</p>
+                <p>{{comment.user.name}} on {{format_date comment.date_created}}</p>
                 <p>{{comment.content}}</p>
                 <div class="col-md-4">
                     <button class="btn btn-sm btn-danger deleteBtn" data-id="{{comment.id}}">DELETE</button>

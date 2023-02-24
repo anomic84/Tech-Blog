@@ -4,23 +4,24 @@
     <p>Posted by {{user.name}} on {{format_date date_created}}</p>
 
 
-    {{#if logged_in}}
+
     <!--check if user logged in-->
-    {{#if comments.length}}
-    <!--check if comments exist-->
+
 </div>
 {{!------------ WHOLE COMMENT AREA ------------}}
 <div class="comment-area">
-
+    {{#if logged_in}}
     <div class="addandupdat mb-5 justify-content-around row">
         {{!------------ ADD A COMMENT ------------}}
+
         <form class="form new-comment-form col-4 add-comment">
             <div class="form-group add-com">
                 <h2 for="post-comments">Add a comment:</h2>
-                <input class="form-input" type="text" id="comments" name="post-comments" />
+                <textarea class="form-input" type="text" id="comments" name="post-comments"></textarea>
                 <button class="btn btn-primary submitBtn" type="submit" data-id="{{id}}">Submit</button>
             </div>
         </form>
+
         {{!------------ UPDATE COMMENT ------------}}
         {{#if match}}
         <div class="col-4 update-post mb-2">
@@ -43,6 +44,9 @@
         </div>
     </div>
     {{/if}}
+    {{/if}}
+    {{#if comments.length}}
+    <!--check if comments exist-->
     {{!------- Each Comment --------}}
     <div class="container commentsarea row">
         <div class="comments">
@@ -60,10 +64,12 @@
 
         {{else}}
         <!--if no comments exist-->
-        <p>No comments</p>
+        <div class="nocommentsarea">
+            <h4 class="nocomments">No comments</h4>
+        </div>
     </div>
 </div>
-{{/if}}
+
 {{/if}}
 
 

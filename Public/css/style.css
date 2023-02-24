@@ -183,9 +183,9 @@ h3 {
     flex-direction: column;
 }
 
-.add-com input {
+/* .add-com textarea {
     padding: 40px 70px;
-}
+} */
 
 .update-post {
     padding: 10px;
@@ -208,6 +208,25 @@ h3 {
 
 .comments h4 {
     color: var(--bgcolor2);
+}
+
+.nocommentsarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nocomments {
+    color: var(--bgcolor2);
+    padding: 10px;
+    /* margin-right: 10px; */
+    width: 70vw;
+    border: 5px solid var(--bgcolor2);
+    box-shadow: 5px 10px var(--bgcolor3);
+    background-color: var(--bgcolor4);
+
+    text-align: center;
+
 }
 
 /* ========== Buttons ========== */

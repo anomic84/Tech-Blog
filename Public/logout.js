@@ -5,13 +5,7 @@ const logoutFormHandler = async () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     });
-    // Sends back to dashboard, logged out
-    // if (response.ok) {
     document.location.replace('/login');
-    // } else {
-    //     // err
-    //     alert('Failed to log out');
-    // }
 };
 
 //Adds Event Listener to button with id #logout

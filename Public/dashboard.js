@@ -3,8 +3,10 @@ const newFormHandler = async (event) => {
   event.preventDefault();
   //link to post name area (name seed)
   const name = document.querySelector('#post-name').value.trim();
+  
   //link to post description area (desc seed)
   const description = document.querySelector('#post-desc').value.trim();
+
   // take both name and description and fetch through api/postroutes
   if (name && description) {
     const response = await fetch(`/api/posts`, {

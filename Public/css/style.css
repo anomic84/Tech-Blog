@@ -7,7 +7,6 @@
 }
 
 * {
-
     margin: 0;
     padding: 0;
 }
@@ -52,6 +51,22 @@ h2 {
 }
 
 /* ============ Login Page ============ */
+.loginarea {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100vw;
+}
+
+.login,
+.signup {
+    padding: 15px;
+    border: 5px solid var(--bgcolor2);
+    box-shadow: 5px 10px var(--bgcolor3);
+    /* margin-left: 10px; */
+    background-color: var(--bgcolor4);
+}
 
 .login h2 {
     display: flex;
@@ -98,6 +113,7 @@ h2 {
 .dash-header {
     align-items: center;
     padding-left: 30px;
+
 }
 
 .dash-header h2 {
@@ -109,11 +125,14 @@ h3 {
     color: var(--bgcolor2);
 }
 
+.createpostarea {
+    width: 80vw;
+}
+
 .create-post {
     padding: 10px;
     border: 5px solid var(--bgcolor2);
     box-shadow: 5px 10px var(--bgcolor3);
-    /* margin-left: 10px; */
     background-color: var(--bgcolor4);
     justify-content: left;
 }
@@ -143,13 +162,12 @@ h3 {
 }
 
 .post-credits {
-    width: fit-content;
+    width: 80vw;
     margin: 20px auto;
     padding: 20px;
     color: var(--bgcolor2);
     border: 5px solid var(--bgcolor2);
     box-shadow: 5px 10px var(--bgcolor3);
-    /* margin-left: 10px; */
     background-color: var(--bgcolor4);
 }
 
@@ -161,13 +179,13 @@ h3 {
 .comment-area {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .addandupdate {
     display: flex;
     flex-direction: row;
-    /* align-items: space-around; */
+    justify-content: center;
 }
 
 .add-comment {
